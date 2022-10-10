@@ -8,9 +8,14 @@
     --bg-secondary: #F5F4FA;
     --text-white: #ffffff;
     --text-footer: rgba(255, 255, 255, 0.6);
+    --icon-footer-background: rgba(225, 225, 225, 0.1);
+    --social-primary-color: #AFB1B8;
 
     --border-light: #ECECEC;
     --border-card: #eeeeee;
+
+    --img-overlay: rgba(47, 48, 58, 0.4);
+    --img-background: #c4c4c4;
 
     --padding-section: 94px;
 }
@@ -96,6 +101,16 @@ img {
     height: auto;
 }
 
+/* Icons */
+
+.icon {
+    margin-right: 10px;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
 /* Header */
 
 .header {
@@ -156,8 +171,14 @@ img {
 /* Hero */
 
 .hero {
+    max-width: 1600px;
+    margin: 0 auto;
     padding: 200px 0;
-    background-color: var(--bg-dark);
+    background-color: var(--img-background);
+    background-image: linear-gradient(var(--img-overlay), var(--img-overlay)), url(../images/hero-img.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .container-hero {
@@ -207,6 +228,20 @@ img {
     margin-bottom: 10px;
     font-size: inherit;
     text-transform: uppercase;
+}
+
+.thumb {
+    margin-bottom: 30px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+    background-color: var(--bg-secondary);
+    border-radius: 4px;
+}
+
+.icon-benefits {
+    width: 90px;
+    height: 70px;
 }
 
 .title {
@@ -274,12 +309,91 @@ img {
 }
 
 .item-description {
-    padding: 30px 24px;
+    padding: 30px 32px;
     text-align: center;
 }
 
 .description {
     font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.social-list {
+    display: flex;
+    justify-content: space-between;
+}
+    
+.icon-link {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    fill: var(--social-primary-color);
+}
+
+.section-team .icon-link {
+    width: 45px;
+    height: 45px;
+}
+
+.team-list .icon-link:hover,
+.team-list .icon-link:focus {
+    background-color: var(--accent-color);
+    border-radius: 50%;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.team-list .icon-link:hover .social-icon,
+.team-list .icon-link:focus .social-icon {
+    fill: var(--text-white);
+}
+
+/* Regular customers */
+
+.section-customers {
+    padding-top: var(--padding-section);
+    padding-bottom: var(--padding-section);
+}
+
+.section-customers .icon-link {
+    width: 170px;
+    height: 92px;
+}
+
+.section-customers .icon-link:hover .customers-icon,
+.section-customers .icon-link:focus .customers-icon {
+    fill: var(--accent-color);
+}
+
+.section-customers .icon-link:hover,
+.section-customers .icon-link:focus {
+    border-color: var(--accent-color);
+}
+
+.customers-list {
+    display: flex;
+}
+
+.customers-list .item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.customers-list .link {
+    border: 1px solid var(--social-primary-color);
+    border-radius: 4px;
+}
+
+.customers-icon {
+    width: 106px;
+    height: 45px;
+}
+
+.icon-sezed {
+    width: 85px;
+    height: 100%;
 }
 
 /* Portfolio page */
@@ -307,7 +421,8 @@ img {
     margin-right: 8px;
 }
 
-.btn-light:hover {
+.btn-light:hover,
+.btn-light:focus {
     color: var(--text-white);
     background-color: var(--accent-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
@@ -332,6 +447,13 @@ img {
     margin-bottom: 30px;
     max-width: 370px;
     border: 1px solid var(--border-card);
+}
+
+.cards-item:hover,
+.cards-item:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+                0px 4px 4px rgba(0, 0, 0, 0.06),
+                1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .cards-item-description {
@@ -359,6 +481,14 @@ img {
     background-color: var(--bg-dark);
 }
 
+.footer-list {
+    display: flex;
+}
+
+.footer-list > .item:not(:last-child) {
+    margin-right: 70px;
+}
+
 .footer .logo {
     display: block;
     margin-bottom: 20px;
@@ -381,4 +511,38 @@ img {
 .footer .link:hover,
 .footer .link:focus {
     color: var(--accent-color);
+}
+
+.footer-title {
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--text-white);
+}
+
+.social-footer-list {
+    display: flex;
+}
+
+.social-footer-list .icon-link {
+    width: 45px;
+    height: 45px;
+    background-color: var(--icon-footer-background);
+    border-radius: 50%;
+}
+
+.social-footer-list .icon-link:hover {
+    background-color: var(--accent-color);
+}
+
+.social-footer-list .item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.footer-icon {
+    fill: var(--text-white);
+
 }

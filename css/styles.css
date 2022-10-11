@@ -240,7 +240,7 @@ img {
 }
 
 .icon-benefits {
-    width: 90px;
+    width: 70px;
     height: 70px;
 }
 
@@ -321,8 +321,9 @@ img {
 .social-list {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
-    
+
 .icon-link {
     display: flex;
     justify-content: center;
@@ -331,8 +332,8 @@ img {
 }
 
 .section-team .icon-link {
-    width: 45px;
-    height: 45px;
+    width: 44px;
+    height: 44px;
 }
 
 .team-list .icon-link:hover,
@@ -472,6 +473,10 @@ img {
     line-height: 2;
 }
 
+.cards-item-description .description {
+    margin-bottom: 0;
+}
+
 
 /* Footer */
 
@@ -534,7 +539,8 @@ img {
     border-radius: 50%;
 }
 
-.social-footer-list .icon-link:hover {
+.social-footer-list .icon-link:hover,
+.social-footer-list .icon-link:focus {
     background-color: var(--accent-color);
 }
 
